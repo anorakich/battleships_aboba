@@ -10,7 +10,7 @@ void Cell::setState(Cell::CellState _state) {
     state = _state;
 }
 
-Cell::CellState Cell::getState() {
+Cell::CellState Cell::getState() const {
     return state;
 }
 

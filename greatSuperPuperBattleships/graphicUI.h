@@ -11,13 +11,13 @@
 #include <iostream>
 #include "customText.h"
 
-class graphicUI : public UI {
+class GraphicUI : public UI {
 private:
     sf::RenderWindow window;
     inline static const std::vector<sf::Color> colorFromCellState = {sf::Color::Red, sf::Color::Cyan, sf::Color::Blue,
                                                                      sf::Color::White, sf::Color::Black};
 public:
-    graphicUI() : window(sf::RenderWindow(sf::VideoMode(app_width, app_height),
+    GraphicUI() : window(sf::RenderWindow(sf::VideoMode(app_width, app_height),
                                           "battleships")) {}
     Position getPosition() override {
         int leftTopX = app_width / 2 - 6 * size_of_cell;
@@ -58,7 +58,7 @@ public:
                 if (!isEnemiesField) {
                     cell.setFillColor(colorFromCellState[state]);
                 } else {
-                    if (state == DEAD || state == INJURED) {
+                    if (state == Cell::DEAD || state == Cell::INJURED) {
                         cell.setFillColor(colorFromCellState[state]);
                     } else
                         cell.setFillColor(colorFromCellState[2]);

@@ -7,12 +7,9 @@
 #include "../UI.h"
 
 Game::Game(): alive_players_count(player_count) {
-    stage = START
-    UI* ui = new UI();
-    for (size_t i = 0; i < player_count; ++i) {
-        players.push_back(Player());
-    }
-}
+    stage = START;
+    UI* ui = new GraphicUI;
+
 void Game::play() {
 
 

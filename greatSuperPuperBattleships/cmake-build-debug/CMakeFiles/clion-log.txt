@@ -1,5 +1,0 @@
-/home/alexkrut/Downloads/clion-2021.3.3/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/home/alexkrut/Downloads/clion-2021.3.3/bin/ninja/linux/ninja -G Ninja /home/alexkrut/Repositories/Projects/battleships_aboba/greatSuperPuperBattleships
--- Found SFML 2.5.1 in /usr/lib/x86_64-linux-gnu/cmake/SFML
--- Configuring done
--- Generating done
--- Build files have been written to: /home/alexkrut/Repositories/Projects/battleships_aboba/greatSuperPuperBattleships/cmake-build-debug
