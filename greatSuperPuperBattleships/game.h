@@ -16,9 +16,11 @@ public:
     };
 
     Game();
+    void play();
 private:
     Stage stage;
     std::vector<Player> players;
+    bool attack();
 };
 
 

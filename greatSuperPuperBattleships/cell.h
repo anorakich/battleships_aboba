@@ -13,10 +13,16 @@
 struct Position {
     int x;
     int y;
-    bool operator==(Position another) {return x == another.x && y == another.y;}
+
+    bool operator==(Position another) { return x == another.x && y == another.y; }
+    bool operator!=(Position another) {return !(*this == another);}
+    Position(int x, int y) : x(x), y(y) {}
+    Position() = default;
+
 };
 
 class Ship;
+
 class Cell {
 public:
     enum CellState {
@@ -29,11 +35,12 @@ public:
     Cell();
     void setState(CellState _state);
     CellState getState();
-//    void setShip(Ship* ship);
+    void setShip(Ship* ship);
+    void getShip();
 
 private:
     CellState state;
-//    Ship* ship;
+    Ship* ship;
 };
 
 #endif //BATTLESHIPS_CELL_H

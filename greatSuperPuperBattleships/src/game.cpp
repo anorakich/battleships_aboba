@@ -7,7 +7,7 @@
 #include "../UI.h"
 
 
-Game::Game() {
+void Game::play() {
     stage = START
     UI* ui = new UI();
     for (size_t i = 0; i < player_count; ++i) {
@@ -20,11 +20,15 @@ Game::Game() {
 
     size_t current_player = 0;
     while(true) {
-        size_t next_player = 
-        Position attack_position;
+        size_t next_player = (current_player + 1) % player_count;
+
         current_player = (current_player + 1) % player_count;
     }
+}
 
+bool Game::attack(size_t current_player, size_t next_player) {
+    players[current_player].get_ui()->displayField(*(players[next_player].get_field()), true);
+    Position attack_position = players[current_player].get_ui()->getPosition();
 
-
+    return false;
 }

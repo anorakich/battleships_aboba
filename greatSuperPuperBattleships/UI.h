@@ -8,9 +8,8 @@
 #include "field.h"
 class UI{
 public:
-    virtual Position getAttackPosition(const Field& field) = 0;
+    virtual Position getPosition() = 0;
     virtual void displayField(const Field& field, bool isEnemiesField) = 0;
-    virtual std::pair<Position,Position> getPositionToSetShip(const Field& field) = 0;
     ~UI() = default;
 
 };
