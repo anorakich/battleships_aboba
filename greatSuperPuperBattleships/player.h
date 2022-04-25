@@ -18,12 +18,14 @@ public:
     UI* get_ui();
     Field* get_field();
     void keep_attack(Cell* cell);
+    bool is_losed();
 private:
     std::string name;
     Field* field;
     UI* ui;
-    std::vector<Ship> ships;
+    std::vector<Ship*> ships;
     size_t ships_count = 10;
+    size_t alive_ships_count = 10;
 };
 
 

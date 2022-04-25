@@ -7,3 +7,20 @@
 Ship::Ship(size_t _sz): sz(_sz), hp(_sz), state(Ship::OK) {
 
 }
+
+void Ship::deal_damage(size_t damage) {
+    if (damage > hp) {
+        hp = 0;
+    } else {
+        hp -= damage;
+    }
+
+    if (hp == 0 && state != DEAD) {
+        for (size_t i = 0; i < sz; ++i) {
+            cells[i]->setState(Cell::DEAD);
+        }
+        state = DEAD;
+    } else if (hp < sz && state != INJURED) {
+        state = INJURED;
+    }
+}

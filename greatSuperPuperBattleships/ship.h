@@ -15,7 +15,8 @@ public:
     };
 
     explicit Ship(size_t _sz);
-    void deal_damage();
+    void deal_damage(size_t damage);
+    ShipState getState();
 private:
     std::vector<Cell*> cells;
     size_t sz;

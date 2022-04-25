@@ -41,15 +41,18 @@ public:
         SHIP,
     };
 
+
     Cell();
     void setState(CellState _state);
     CellState getState();
     void setShip(Ship* ship);
-    void getShip();
-
+    Ship* getShip();
+    bool getIsHited();
+    void setIsHited(bool _isHited);
 private:
     CellState state;
     Ship* ship;
+    bool isHited;
 };
 
 #endif //BATTLESHIPS_CELL_H

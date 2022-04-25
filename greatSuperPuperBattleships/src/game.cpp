@@ -6,13 +6,15 @@
 #include "../constants.h"
 #include "../UI.h"
 
-
-void Game::play() {
+Game::Game(): alive_players_count(player_count) {
     stage = START
     UI* ui = new UI();
     for (size_t i = 0; i < player_count; ++i) {
         players.push_back(Player());
     }
+}
+void Game::play() {
+
 
     //TODO set ships and field;
 
@@ -21,14 +23,21 @@ void Game::play() {
     size_t current_player = 0;
     while(true) {
         size_t next_player = (current_player + 1) % player_count;
-
+        attack(current_player, next_player);
+        if (players[next_player].is_losed()) {
+            win();
+        }
         current_player = (current_player + 1) % player_count;
     }
 }
 
-bool Game::attack(size_t current_player, size_t next_player) {
+void Game::attack(size_t current_player, size_t next_player) {
     players[current_player].get_ui()->displayField(*(players[next_player].get_field()), true);
     Position attack_position = players[current_player].get_ui()->getPosition();
-
-    return false;
+    players[next_player].keep_attack(players[next_player].get_field()->at(
+            attack_position.x, attack_position.y));
+    players[current_player].get_ui()->displayField(*(players[next_player].get_field()), true);
+    players[current_player].get_ui()->waitForNextTurn();
 }
+
+
