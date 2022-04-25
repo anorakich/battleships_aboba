@@ -12,19 +12,30 @@
 class Player {
 public:
     Player();
+
     void set_name(std::string _name);
+
     void set_field(Field* _field);
+
     void set_ui(UI* _ui);
+
     UI* get_ui();
+
     Field* get_field();
+
     void keep_attack(Cell* cell);
+
     void setShip(Ship::ShipType type);
+
+    bool is_losed();
+
 private:
     std::string name;
     Field* field;
     UI* ui;
-    std::vector<Ship> ships;
+    std::vector<Ship*> ships;
     size_t ships_count = 10;
+    size_t alive_ships_count = 10;
 };
 
 

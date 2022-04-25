@@ -4,6 +4,7 @@
 
 #include "cell.h"
 #include "vector"
+
 class Cell;
 
 class Ship {
@@ -22,9 +23,14 @@ public:
 
     explicit Ship(ShipType type);
 
-    void deal_damage();
-
     void addCell(Cell* cell);
+
+    explicit Ship(size_t _sz);
+
+    void deal_damage(size_t damage);
+
+    ShipState getState();
+
 private:
     std::vector<Cell*> cells;
     size_t sz;

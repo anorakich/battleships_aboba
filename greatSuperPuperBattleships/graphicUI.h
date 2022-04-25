@@ -55,14 +55,14 @@ public:
                                  app_height / 4 + i * (size_of_cell));
                 cell.setOutlineColor(sf::Color::Black);
                 cell.setOutlineThickness(4);
-                Cell::CellState state = field.at(i, j).getState();
+                Cell::CellState state = field.at(i, j)->getState();
                 if (!isEnemiesField) {
                     cell.setFillColor(colorFromCellState[state]);
                 } else {
                     if (state == Cell::DEAD || state == Cell::INJURED) {
                         cell.setFillColor(colorFromCellState[state]);
                     } else {
-                        if (field.at(i, j).getIsHited())
+                        if (field.at(i, j)->getIsHited())
                             cell.setFillColor(colorFromCellState[2]);
                         else
                             cell.setFillColor(sf::Color::White);

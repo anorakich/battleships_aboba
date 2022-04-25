@@ -13,3 +13,7 @@ void Cell::setState(Cell::CellState _state) {
 Cell::CellState Cell::getState() const {
     return state;
 }
+
+Ship* Cell::getShip() {
+    return ship;
+}

@@ -15,8 +15,11 @@ struct Position {
     int y;
 
     bool operator==(Position another) { return x == another.x && y == another.y; }
-    bool operator!=(Position another) {return !(*this == another);}
+
+    bool operator!=(Position another) { return !(*this == another); }
+
     Position(int x, int y) : x(x), y(y) {}
+
     Position() = default;
 
     void read() {
@@ -41,16 +44,25 @@ public:
         SHIP,
     };
 
+
     Cell();
+
     void setState(CellState _state);
-    CellState getState() const ;
+
+    CellState getState() const;
+
     void setShip(Ship* ship);
-    void getShip();
-    bool getIsHited() const {return isHited;}
+
+    Ship* getShip();
+
+    bool getIsHited();
+
+    void setIsHited(bool _isHited);
+
 private:
     CellState state;
     Ship* ship;
-    bool isHited = false;
+    bool isHited;
 };
 
 #endif //BATTLESHIPS_CELL_H

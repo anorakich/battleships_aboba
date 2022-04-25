@@ -18,13 +18,13 @@ void Player::setShip(Ship::ShipType type) {
             if (start.y > end.y)
                 std::swap(start, end);
             for (int i = 0; i < type; ++i) {
-                ship.addCell(&field->at(start.y + i, start.x));
+                ship.addCell(field->at(start.y + i, start.x));
             }
         } else if (start.y == end.y && abs(start.x - end.x) == type) {
             if (start.x > end.x)
                 std::swap(start, end);
             for (int i = 0; i < type; ++i) {
-                ship.addCell(&field->at(start.y, start.x + i));
+                ship.addCell(field->at(start.y, start.x + i));
             }
         }
     }
@@ -52,5 +52,18 @@ Field* Player::get_field() {
 }
 
 void Player::keep_attack(Cell* cell) {
-
+    if (!cell->getIsHited()) return;
+    cell->setIsHited(true);
+    if (cell->getState() == Cell::EMPTY) return;
+    if (cell->getState() == Cell::SHIP) {
+        cell->setState(Cell::INJURED);
+        Ship* ship = cell->getShip();
+        ship->deal_damage(1);
+        if (ship->getState() == Ship::DEAD) {
+            alive_ships_count -= 1;
+        }
+    }
 }
+    bool Player::is_losed() {
+        return alive_ships_count == 0;
+    }

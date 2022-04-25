@@ -26,3 +26,12 @@
 2	590	1650922370801295261	CMakeFiles/battleships.dir/src/field.cpp.o	67742d075ba398e0
 1	964	1650922371173284321	CMakeFiles/battleships.dir/src/game.cpp.o	8472ea44efa1b589
 1	1000	1650922371209283264	CMakeFiles/battleships.dir/src/menu.cpp.o	d73ff21d4af5238d
+3	402	1650923141825406146	CMakeFiles/battleships.dir/shipBuilder.cpp.o	86c8af13a19dc33
+1	454	1650923141877406658	CMakeFiles/battleships.dir/src/cell.cpp.o	65065b03dd2a9bae
+2	482	1650923141905406932	CMakeFiles/battleships.dir/src/field.cpp.o	67742d075ba398e0
+2	483	1650923141905406932	CMakeFiles/battleships.dir/src/ship.cpp.o	bde5703c6db88066
+0	831	1650923142253410356	CMakeFiles/battleships.dir/src/menu.cpp.o	d73ff21d4af5238d
+2	340	1650923149645483686	CMakeFiles/battleships.dir/src/player.cpp.o	55a4e3d198a30083
+1	800	1650923220394242560	CMakeFiles/battleships.dir/src/menu.cpp.o	d73ff21d4af5238d
+1	716	1650923265854780527	CMakeFiles/battleships.dir/src/menu.cpp.o	d73ff21d4af5238d
+1	726	1650923265862780625	CMakeFiles/battleships.dir/src/game.cpp.o	8472ea44efa1b589
