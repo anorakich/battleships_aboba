@@ -8,8 +8,9 @@
 #include "field.h"
 class UI{
 public:
-    virtual Position getPosition(const Field& field) = 0;
+    virtual Position getPosition() = 0;
     virtual void displayField(const Field& field, bool isEnemiesField) = 0;
+    virtual void waitForNextTurn() = 0;
     ~UI() = default;
 
 };

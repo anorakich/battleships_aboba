@@ -97,12 +97,6 @@ build CMakeFiles/battleships.dir/src/field.cpp.o: CXX_COMPILER__battleships_Debu
   OBJECT_DIR = CMakeFiles/battleships.dir
   OBJECT_FILE_DIR = CMakeFiles/battleships.dir/src
 
-build CMakeFiles/battleships.dir/src/GraphicUI.cpp.o: CXX_COMPILER__battleships_Debug /home/nikita/battleships_aboba/greatSuperPuperBattleships/src/GraphicUI.cpp || cmake_object_order_depends_target_battleships
-  DEP_FILE = CMakeFiles/battleships.dir/src/GraphicUI.cpp.o.d
-  FLAGS = -pthread  -g -std=gnu++17
-  OBJECT_DIR = CMakeFiles/battleships.dir
-  OBJECT_FILE_DIR = CMakeFiles/battleships.dir/src
-
 
 # =============================================================================
 # Link build statements for EXECUTABLE target battleships
@@ -111,7 +105,7 @@ build CMakeFiles/battleships.dir/src/GraphicUI.cpp.o: CXX_COMPILER__battleships_
 #############################################
 # Link the executable battleships
 
-build battleships: CXX_EXECUTABLE_LINKER__battleships_Debug CMakeFiles/battleships.dir/main.cpp.o CMakeFiles/battleships.dir/src/menu.cpp.o CMakeFiles/battleships.dir/src/game.cpp.o CMakeFiles/battleships.dir/src/customText.cpp.o CMakeFiles/battleships.dir/src/cell.cpp.o CMakeFiles/battleships.dir/src/ship.cpp.o CMakeFiles/battleships.dir/src/player.cpp.o CMakeFiles/battleships.dir/src/field.cpp.o CMakeFiles/battleships.dir/src/GraphicUI.cpp.o | /usr/lib/x86_64-linux-gnu/libsfml-graphics.so.2.5.1 /usr/lib/x86_64-linux-gnu/libsfml-audio.so.2.5.1 /usr/lib/x86_64-linux-gnu/libsfml-window.so.2.5.1 /usr/lib/x86_64-linux-gnu/libsfml-system.so.2.5.1
+build battleships: CXX_EXECUTABLE_LINKER__battleships_Debug CMakeFiles/battleships.dir/main.cpp.o CMakeFiles/battleships.dir/src/menu.cpp.o CMakeFiles/battleships.dir/src/game.cpp.o CMakeFiles/battleships.dir/src/customText.cpp.o CMakeFiles/battleships.dir/src/cell.cpp.o CMakeFiles/battleships.dir/src/ship.cpp.o CMakeFiles/battleships.dir/src/player.cpp.o CMakeFiles/battleships.dir/src/field.cpp.o | /usr/lib/x86_64-linux-gnu/libsfml-graphics.so.2.5.1 /usr/lib/x86_64-linux-gnu/libsfml-audio.so.2.5.1 /usr/lib/x86_64-linux-gnu/libsfml-window.so.2.5.1 /usr/lib/x86_64-linux-gnu/libsfml-system.so.2.5.1
   FLAGS = -pthread  -g
   LINK_LIBRARIES = /usr/lib/x86_64-linux-gnu/libsfml-graphics.so.2.5.1  /usr/lib/x86_64-linux-gnu/libsfml-audio.so.2.5.1  /usr/lib/x86_64-linux-gnu/libsfml-window.so.2.5.1  /usr/lib/x86_64-linux-gnu/libsfml-system.so.2.5.1
   OBJECT_DIR = CMakeFiles/battleships.dir

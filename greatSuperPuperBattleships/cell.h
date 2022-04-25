@@ -5,7 +5,7 @@
 #ifndef BATTLESHIPS_CELL_H
 #define BATTLESHIPS_CELL_H
 #pragma once
-
+#include <iostream>
 #include "SFML/Graphics.hpp"
 #include "constants.h"
 #include "vector"
@@ -22,6 +22,15 @@ struct Position {
     bool operator!=(Position another) {return !(*this == another);}
     Position(int x, int y) : x(x), y(y) {}
     Position() = default;
+    void read() {
+        char pos_x;
+        char pos_y;
+        std::cin >> pos_x;
+        std::cin >> pos_y;
+        x = pos_x - 'a';
+        y = pos_y - '1';
+    }
+
 };
 
 class Ship;
