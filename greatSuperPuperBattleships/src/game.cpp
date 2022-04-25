@@ -5,11 +5,11 @@
 #include "../game.h"
 #include "../constants.h"
 #include "../UI.h"
-
+#include "../graphicUI.h"
 
 void Game::play() {
-    stage = START
-    UI* ui = new UI();
+    stage = START;
+    UI* ui = new GraphicUI;
     for (size_t i = 0; i < player_count; ++i) {
         players.push_back(Player());
     }

@@ -20,7 +20,7 @@ public:
 private:
     Stage stage;
     std::vector<Player> players;
-    bool attack();
+    bool attack(size_t current_player, size_t next_player);
 };
 
 

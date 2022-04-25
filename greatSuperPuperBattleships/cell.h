@@ -43,7 +43,7 @@ public:
 
     Cell();
     void setState(CellState _state);
-    CellState getState();
+    CellState getState() const ;
     void setShip(Ship* ship);
     void getShip();
 
