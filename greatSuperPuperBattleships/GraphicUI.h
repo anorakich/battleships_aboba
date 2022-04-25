@@ -17,8 +17,8 @@ private:
     inline static const std::vector<sf::Color> colorFromCellState = {sf::Color::Red, sf::Color::Cyan, sf::Color::Blue,
                                                                      sf::Color::White, sf::Color::Black};
 public:
-    GraphicUI();
-
+    GraphicUI() : window(sf::RenderWindow(sf::VideoMode(app_width, app_height),
+                                          "battleships")) {}
     Position getPosition(const Field& field) override {
         int leftTopX = app_width / 2 - 6 * size_of_cell;
         int leftTopY = app_height / 4;
