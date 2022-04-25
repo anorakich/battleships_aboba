@@ -29,5 +29,5 @@ Field *Player::get_field() {
 }
 
 void Player::keep_attack(Cell *cell) {
-    
+
 }

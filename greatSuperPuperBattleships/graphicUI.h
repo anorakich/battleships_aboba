@@ -11,15 +11,15 @@
 #include <iostream>
 #include "customText.h"
 
-class GraphicUI : public UI {
+class graphicUI : public UI {
 private:
     sf::RenderWindow window;
     inline static const std::vector<sf::Color> colorFromCellState = {sf::Color::Red, sf::Color::Cyan, sf::Color::Blue,
                                                                      sf::Color::White, sf::Color::Black};
 public:
-    GraphicUI();
-
-    Position getPosition(const Field& field) override {
+    graphicUI() : window(sf::RenderWindow(sf::VideoMode(app_width, app_height),
+                                          "battleships")) {}
+    Position getPosition() override {
         int leftTopX = app_width / 2 - 6 * size_of_cell;
         int leftTopY = app_height / 4;
         while (window.isOpen()) {
@@ -68,7 +68,15 @@ public:
         }
         window.display();
     }
-
+    void waitForNextTurn() override {
+        while (window.isOpen()) {
+            sf::Event event;
+            while (window.pollEvent(event)) {
+                if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Enter)
+                    return;
+            }
+        }
+    }
 };
 
 
