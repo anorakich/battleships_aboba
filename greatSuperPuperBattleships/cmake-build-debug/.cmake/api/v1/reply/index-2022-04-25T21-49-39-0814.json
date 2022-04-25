@@ -8,25 +8,25 @@
 		},
 		"paths" : 
 		{
-			"cmake" : "/snap/clion/189/bin/cmake/linux/bin/cmake",
-			"cpack" : "/snap/clion/189/bin/cmake/linux/bin/cpack",
-			"ctest" : "/snap/clion/189/bin/cmake/linux/bin/ctest",
-			"root" : "/snap/clion/189/bin/cmake/linux/share/cmake-3.22"
+			"cmake" : "/home/alexkrut/Downloads/clion-2021.3.3/bin/cmake/linux/bin/cmake",
+			"cpack" : "/home/alexkrut/Downloads/clion-2021.3.3/bin/cmake/linux/bin/cpack",
+			"ctest" : "/home/alexkrut/Downloads/clion-2021.3.3/bin/cmake/linux/bin/ctest",
+			"root" : "/home/alexkrut/Downloads/clion-2021.3.3/bin/cmake/linux/share/cmake-3.21"
 		},
 		"version" : 
 		{
 			"isDirty" : false,
 			"major" : 3,
-			"minor" : 22,
-			"patch" : 3,
-			"string" : "3.22.3",
+			"minor" : 21,
+			"patch" : 1,
+			"string" : "3.21.1",
 			"suffix" : ""
 		}
 	},
 	"objects" : 
 	[
 		{
-			"jsonFile" : "codemodel-v2-c5745603fa38ab98e87c.json",
+			"jsonFile" : "codemodel-v2-5dd25c973b3b221028ae.json",
 			"kind" : "codemodel",
 			"version" : 
 			{
@@ -35,7 +35,7 @@
 			}
 		},
 		{
-			"jsonFile" : "cache-v2-505dc07805c579a54a4d.json",
+			"jsonFile" : "cache-v2-a7ce5973d989122bd650.json",
 			"kind" : "cache",
 			"version" : 
 			{
@@ -44,7 +44,7 @@
 			}
 		},
 		{
-			"jsonFile" : "cmakeFiles-v1-e2d993d995d9edc5bbba.json",
+			"jsonFile" : "cmakeFiles-v1-f9c7704215ab1b198cd4.json",
 			"kind" : "cmakeFiles",
 			"version" : 
 			{
@@ -66,7 +66,7 @@
 	{
 		"cache-v2" : 
 		{
-			"jsonFile" : "cache-v2-505dc07805c579a54a4d.json",
+			"jsonFile" : "cache-v2-a7ce5973d989122bd650.json",
 			"kind" : "cache",
 			"version" : 
 			{
@@ -76,7 +76,7 @@
 		},
 		"cmakeFiles-v1" : 
 		{
-			"jsonFile" : "cmakeFiles-v1-e2d993d995d9edc5bbba.json",
+			"jsonFile" : "cmakeFiles-v1-f9c7704215ab1b198cd4.json",
 			"kind" : "cmakeFiles",
 			"version" : 
 			{
@@ -86,7 +86,7 @@
 		},
 		"codemodel-v2" : 
 		{
-			"jsonFile" : "codemodel-v2-c5745603fa38ab98e87c.json",
+			"jsonFile" : "codemodel-v2-5dd25c973b3b221028ae.json",
 			"kind" : "codemodel",
 			"version" : 
 			{

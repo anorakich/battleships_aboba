@@ -18,14 +18,18 @@ void Game::play() {
     stage = FIGHT;
 
     size_t current_player = 0;
-    while(true) {
+    while(alive_players_count > 1) {
         size_t next_player = (current_player + 1) % player_count;
-        attack(current_player, next_player);
-        if (players[next_player].is_losed()) {
-//            win();
+        while (players[next_player].is_losed()) {
+            next_player = (current_player + 1) % player_count;
         }
-        current_player = (current_player + 1) % player_count;
+        attack(current_player, next_player);
+        current_player = next_player;
+        while (players[current_player].is_losed()) {
+            current_player = (current_player + 1) % player_count;
+        }
     }
+    win(current_player);
 }
 
 void Game::attack(size_t current_player, size_t next_player) {

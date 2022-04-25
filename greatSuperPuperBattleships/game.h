@@ -21,6 +21,7 @@ private:
     std::vector<Player> players;
     size_t alive_players_count;
     void attack(size_t current_player, size_t next_player);
+    void win(size_t player);
 };
 
 
