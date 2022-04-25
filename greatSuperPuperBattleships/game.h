@@ -15,7 +15,7 @@ public:
         FIGHT,
     };
 
-    Game();
+    Game() {play();}
     void play();
 private:
     Stage stage;

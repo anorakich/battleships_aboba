@@ -10,7 +10,7 @@
 class Field {
 public:
     explicit Field(size_t _sz);
-    const Cell& at(int i, int j) const {return *field[i][j];}
+    Cell& at(int i, int j) const {return *field[i][j];}
 private:
     size_t sz;
     std::vector<std::vector<Cell*>> field;

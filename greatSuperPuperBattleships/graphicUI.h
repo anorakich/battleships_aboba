@@ -19,6 +19,7 @@ private:
 public:
     GraphicUI() : window(sf::RenderWindow(sf::VideoMode(app_width, app_height),
                                           "battleships")) {}
+
     Position getPosition() override {
         int leftTopX = app_width / 2 - 6 * size_of_cell;
         int leftTopY = app_height / 4;
@@ -60,14 +61,20 @@ public:
                 } else {
                     if (state == Cell::DEAD || state == Cell::INJURED) {
                         cell.setFillColor(colorFromCellState[state]);
-                    } else
-                        cell.setFillColor(colorFromCellState[2]);
+                    } else {
+                        if (field.at(i, j).getIsHited())
+                            cell.setFillColor(colorFromCellState[2]);
+                        else
+                            cell.setFillColor(sf::Color::White);
+                    }
+
                 }
                 window.draw(cell);
             }
         }
         window.display();
     }
+
     void waitForNextTurn() override {
         while (window.isOpen()) {
             sf::Event event;

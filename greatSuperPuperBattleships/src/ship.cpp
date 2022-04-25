@@ -4,6 +4,8 @@
 
 #include "../ship.h"
 
-Ship::Ship(size_t _sz): sz(_sz), hp(_sz), state(Ship::OK) {
+Ship::Ship(ShipType type): sz(type), hp(type), state(Ship::OK) {}
 
+void Ship::addCell(Cell* cell) {
+    cells.push_back(cell);
 }

@@ -4,18 +4,27 @@
 
 #include "cell.h"
 #include "vector"
-
 class Cell;
+
 class Ship {
 public:
-    enum ShipState{
+    enum ShipState {
         INJURED,
         DEAD,
         OK,
     };
+    enum ShipType {
+        ONEDECK,
+        TWODECK,
+        THREEDECK,
+        FOURDECK,
+    };
 
-    explicit Ship(size_t _sz);
+    explicit Ship(ShipType type);
+
     void deal_damage();
+
+    void addCell(Cell* cell);
 private:
     std::vector<Cell*> cells;
     size_t sz;

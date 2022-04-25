@@ -18,6 +18,7 @@ public:
     UI* get_ui();
     Field* get_field();
     void keep_attack(Cell* cell);
+    void setShip(Ship::ShipType type);
 private:
     std::string name;
     Field* field;

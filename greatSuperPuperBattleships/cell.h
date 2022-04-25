@@ -46,10 +46,11 @@ public:
     CellState getState() const ;
     void setShip(Ship* ship);
     void getShip();
-
+    bool getIsHited() const {return isHited;}
 private:
     CellState state;
     Ship* ship;
+    bool isHited = false;
 };
 
 #endif //BATTLESHIPS_CELL_H
