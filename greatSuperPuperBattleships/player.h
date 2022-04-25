@@ -5,12 +5,21 @@
 #ifndef BATTLESHIPS_PLAYER_H
 #define BATTLESHIPS_PLAYER_H
 
+#include <string>
 #include "field.h"
+#include "UI.h"
+
 class Player {
 public:
-
+    Player();
+    void set_name(std::string _name);
+    void set_field(Field* _field);
+    void set_ui(UI* _ui);
 private:
-    Field field;
+    std::string name;
+    Field* field;
+    UI* ui;
+    std::vector<Ship> ships;
 };
 
 

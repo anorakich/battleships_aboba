@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/home/nikita/battleships_aboba/greatSuperPuperBattleships/cmake-build-debug",
-		"source" : "/home/nikita/battleships_aboba/greatSuperPuperBattleships"
+		"build" : "/home/alexkrut/Repositories/Projects/battleships_aboba/greatSuperPuperBattleships/cmake-build-debug",
+		"source" : "/home/alexkrut/Repositories/Projects/battleships_aboba/greatSuperPuperBattleships"
 	},
 	"version" : 
 	{

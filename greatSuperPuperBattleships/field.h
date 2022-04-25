@@ -8,7 +8,10 @@
 #include <vector>
 #include "cell.h"
 class Field {
+public:
+    explicit Field(size_t _sz);
 private:
+    size_t sz;
     std::vector<std::vector<Cell*>> field;
 };
 

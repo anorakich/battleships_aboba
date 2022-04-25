@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/nikita/battleships_aboba/greatSuperPuperBattleships/cmake-build-debug"
+			"value" : "/home/alexkrut/Repositories/Projects/battleships_aboba/greatSuperPuperBattleships/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -79,7 +79,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "22"
+			"value" : "21"
 		},
 		{
 			"name" : "CMAKE_CACHE_PATCH_VERSION",
@@ -91,7 +91,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "3"
+			"value" : "1"
 		},
 		{
 			"name" : "CMAKE_COMMAND",
@@ -103,7 +103,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/snap/clion/189/bin/cmake/linux/bin/cmake"
+			"value" : "/home/alexkrut/Downloads/clion-2021.3.3/bin/cmake/linux/bin/cmake"
 		},
 		{
 			"name" : "CMAKE_CPACK_COMMAND",
@@ -115,7 +115,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/snap/clion/189/bin/cmake/linux/bin/cpack"
+			"value" : "/home/alexkrut/Downloads/clion-2021.3.3/bin/cmake/linux/bin/cpack"
 		},
 		{
 			"name" : "CMAKE_CTEST_COMMAND",
@@ -127,7 +127,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/snap/clion/189/bin/cmake/linux/bin/ctest"
+			"value" : "/home/alexkrut/Downloads/clion-2021.3.3/bin/cmake/linux/bin/ctest"
 		},
 		{
 			"name" : "CMAKE_CXX_COMPILER",
@@ -402,18 +402,6 @@
 			"value" : "CMAKE_DLLTOOL-NOTFOUND"
 		},
 		{
-			"name" : "CMAKE_EDIT_COMMAND",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Path to cache edit program executable."
-				}
-			],
-			"type" : "INTERNAL",
-			"value" : "/snap/clion/189/bin/cmake/linux/bin/ccmake"
-		},
-		{
 			"name" : "CMAKE_EXECUTABLE_FORMAT",
 			"properties" : 
 			[
@@ -591,7 +579,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/nikita/battleships_aboba/greatSuperPuperBattleships"
+			"value" : "/home/alexkrut/Repositories/Projects/battleships_aboba/greatSuperPuperBattleships"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -643,7 +631,7 @@
 				}
 			],
 			"type" : "UNINITIALIZED",
-			"value" : "/snap/clion/189/bin/ninja/linux/ninja"
+			"value" : "/home/alexkrut/Downloads/clion-2021.3.3/bin/ninja/linux/ninja"
 		},
 		{
 			"name" : "CMAKE_MODULE_LINKER_FLAGS",
@@ -875,7 +863,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/snap/clion/189/bin/cmake/linux/share/cmake-3.22"
+			"value" : "/home/alexkrut/Downloads/clion-2021.3.3/bin/cmake/linux/share/cmake-3.21"
 		},
 		{
 			"name" : "CMAKE_SHARED_LINKER_FLAGS",
@@ -1147,7 +1135,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/nikita/battleships_aboba/greatSuperPuperBattleships/cmake-build-debug"
+			"value" : "/home/alexkrut/Repositories/Projects/battleships_aboba/greatSuperPuperBattleships/cmake-build-debug"
 		},
 		{
 			"name" : "battleships_IS_TOP_LEVEL",
@@ -1171,7 +1159,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/nikita/battleships_aboba/greatSuperPuperBattleships"
+			"value" : "/home/alexkrut/Repositories/Projects/battleships_aboba/greatSuperPuperBattleships"
 		}
 	],
 	"kind" : "cache",

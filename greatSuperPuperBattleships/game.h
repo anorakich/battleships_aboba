@@ -5,17 +5,20 @@
 #ifndef BATTLESHIPS_GAME_H
 #define BATTLESHIPS_GAME_H
 #include "player.h"
-enum Turn {
-    FIRST_PLAYER_TURN,
-    SECOND_PLAYER_TURN,
-};
+#include <vector>
+#include <queue>
+
 class Game {
-    Turn turn = FIRST_PLAYER_TURN;
-    sf::RenderWindow window;
 public:
-    Player player1;
-    Player player2;
+    enum Stage {
+        START,
+        FIGHT,
+    };
+
     Game();
+private:
+    Stage stage;
+    std::vector<Player> players;
 };
 
 

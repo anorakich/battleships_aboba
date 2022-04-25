@@ -4,21 +4,12 @@
 
 #include "../cell.h"
 
-void Cell::draw(sf::RenderWindow& window, int position_x, int position_y, bool isSelected) {
-    sf::RectangleShape rectangle({(float) size_of_cell, (float) size_of_cell});
-    rectangle.setPosition(position_x, position_y);
-    rectangle.setOutlineThickness(4);
-    rectangle.setFillColor(colorsFromState[state]);
-    if (isSelected)
-        rectangle.setOutlineColor(sf::Color::Magenta);
-    else
-        rectangle.setOutlineColor(sf::Color::Black);
-    window.draw(rectangle);
+Cell::Cell(): state(Cell::EMPTY) {}
+
+void Cell::setState(Cell::CellState _state) {
+    state = _state;
 }
 
-void Cell::attack() {
-    if (state == SHIP) {
-        state = DEAD;
-        ship->decreaseHP();
-    }
+Cell::CellState Cell::getState() {
+    return state;
 }

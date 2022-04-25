@@ -4,19 +4,23 @@
 
 #include "cell.h"
 #include "vector"
-enum ShipState{
-    INJURED,
-    DEAD,
-    OK,
-};
+
 class Cell;
 class Ship {
 public:
-    void decreaseHP();
+    enum ShipState{
+        INJURED,
+        DEAD,
+        OK,
+    };
+
+    explicit Ship(size_t _sz);
+    void deal_damage();
 private:
     std::vector<Cell*> cells;
-    int HP = cells.size();
-    ShipState state = OK;
+    size_t sz;
+    size_t hp;
+    ShipState state;
 };
 
 

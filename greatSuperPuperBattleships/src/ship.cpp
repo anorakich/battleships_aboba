@@ -3,11 +3,7 @@
 //
 
 #include "../ship.h"
-void Ship::decreaseHP() {
-    --HP;
-    if (HP == 0) {
-        state = DEAD;
-        for (auto cell : cells)
-            cell->setState(Cell::DEAD);
-    }
+
+Ship::Ship(size_t _sz): sz(_sz), hp(_sz), state(Ship::OK) {
+
 }
