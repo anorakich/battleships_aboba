@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "battleships::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-battleships-Debug-ce994aa9d89858a0d19f.json",
+					"jsonFile" : "target-battleships-Debug-a864852ddeb1255aa930.json",
 					"name" : "battleships",
 					"projectIndex" : 0
 				}
@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/home/nikita/wtfRepo/battleships_aboba/greatSuperPuperBattleships/cmake-build-debug",
-		"source" : "/home/nikita/wtfRepo/battleships_aboba/greatSuperPuperBattleships"
+		"build" : "/home/nikita/battleships_aboba/greatSuperPuperBattleships/cmake-build-debug",
+		"source" : "/home/nikita/battleships_aboba/greatSuperPuperBattleships"
 	},
 	"version" : 
 	{

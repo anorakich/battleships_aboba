@@ -1,5 +1,5 @@
-/snap/clion/189/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/snap/clion/189/bin/ninja/linux/ninja -G Ninja -S /home/nikita/wtfRepo/battleships_aboba/greatSuperPuperBattleships -B /home/nikita/wtfRepo/battleships_aboba/greatSuperPuperBattleships/cmake-build-debug
+/snap/clion/189/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/snap/clion/189/bin/ninja/linux/ninja -G Ninja -S /home/nikita/battleships_aboba/greatSuperPuperBattleships -B /home/nikita/battleships_aboba/greatSuperPuperBattleships/cmake-build-debug
 -- Found SFML 2.5.1 in /usr/lib/x86_64-linux-gnu/cmake/SFML
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/nikita/wtfRepo/battleships_aboba/greatSuperPuperBattleships/cmake-build-debug
+-- Build files have been written to: /home/nikita/battleships_aboba/greatSuperPuperBattleships/cmake-build-debug

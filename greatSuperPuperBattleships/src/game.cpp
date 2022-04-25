@@ -7,5 +7,4 @@
 
 
 Game::Game(): window(sf::VideoMode(app_width, app_height), "battleships"){
-
 }
