@@ -9,7 +9,13 @@
 #include "cell.h"
 class Field {
 private:
+    Cell cell;
     std::vector<std::vector<Cell*>> field;
+public:
+    Field() {
+        field = std::vector<std::vector<Cell*>> (10,std::vector<Cell*> (10, &cell));
+    }
+    const Cell& at(int i, int j) const {return *field[i][j];}
 };
 
 
