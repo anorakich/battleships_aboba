@@ -7,10 +7,11 @@
 #include "cell.h"
 #include "field.h"
 class UI{
-    virtual Position getAttackPosition() = 0;
-    virtual void displayField(const Field& field) = 0;
+public:
+    virtual Position getAttackPosition(const Field& field) = 0;
+    virtual void displayField(const Field& field, bool isEnemiesField) = 0;
     virtual std::pair<Position,Position> getPositionToSetShip(const Field& field) = 0;
-    virtual ~UI() = default;
+    ~UI() = default;
 
 };
 #endif //BATTLESHIPS_UI_H

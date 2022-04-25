@@ -1,5 +1,5 @@
 # ninja log v5
-0	47	1650897930145515739	build.ninja	62634df644783c8b
+0	47	1650913915510561745	build.ninja	62634df644783c8b
 1	662	1650897147651533248	CMakeFiles/battleships.dir/main.cpp.o	470000d728bcc88d
 6	1211	1650897066503094319	CMakeFiles/battleships.dir/src/field.cpp.o	67742d075ba398e0
 3	1100	1650897066395093773	CMakeFiles/battleships.dir/src/game.cpp.o	8472ea44efa1b589
