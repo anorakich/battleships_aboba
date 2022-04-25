@@ -2,9 +2,9 @@
 #include "../menu.h"
 #include "SFML/Graphics.hpp"
 #include "SFML/Audio.hpp"
-#include "../constants.h"
 #include "../game.h"
 #include "../settings.h"
+#include "../constants.h"
 #include "../customText.h"
 
 using namespace sf;

@@ -145,8 +145,8 @@
 	"kind" : "cmakeFiles",
 	"paths" : 
 	{
-		"build" : "/home/nikita/battleships_aboba/greatSuperPuperBattleships/cmake-build-debug",
-		"source" : "/home/nikita/battleships_aboba/greatSuperPuperBattleships"
+		"build" : "/home/nikita/wtfRepo/battleships_aboba/greatSuperPuperBattleships/cmake-build-debug",
+		"source" : "/home/nikita/wtfRepo/battleships_aboba/greatSuperPuperBattleships"
 	},
 	"version" : 
 	{

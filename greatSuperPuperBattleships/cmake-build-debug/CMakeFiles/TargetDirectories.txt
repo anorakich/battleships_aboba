@@ -1,3 +1,3 @@
-/home/nikita/battleships_aboba/greatSuperPuperBattleships/cmake-build-debug/CMakeFiles/battleships.dir
-/home/nikita/battleships_aboba/greatSuperPuperBattleships/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/nikita/battleships_aboba/greatSuperPuperBattleships/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/nikita/wtfRepo/battleships_aboba/greatSuperPuperBattleships/cmake-build-debug/CMakeFiles/battleships.dir
+/home/nikita/wtfRepo/battleships_aboba/greatSuperPuperBattleships/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/nikita/wtfRepo/battleships_aboba/greatSuperPuperBattleships/cmake-build-debug/CMakeFiles/rebuild_cache.dir

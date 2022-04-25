@@ -1,16 +1,16 @@
 //
-// Created by nikita on 16.04.22.
+// Created by nikita on 24.04.22.
 //
 
 #ifndef BATTLESHIPS_PLAYER_H
 #define BATTLESHIPS_PLAYER_H
 
-#include "SFML/Graphics.hpp"
-#include "ship.h"
+#include "field.h"
 class Player {
+public:
+
 private:
-    sf::RenderWindow window;
-    std::vector<Ship> ships;
+    Field field;
 };
 
 

@@ -39,7 +39,7 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = /home/nikita/battleships_aboba/greatSuperPuperBattleships/cmake-build-debug/
+cmake_ninja_workdir = /home/nikita/wtfRepo/battleships_aboba/greatSuperPuperBattleships/cmake-build-debug/
 # =============================================================================
 # Object build statements for EXECUTABLE target battleships
 
@@ -49,45 +49,51 @@ cmake_ninja_workdir = /home/nikita/battleships_aboba/greatSuperPuperBattleships/
 
 build cmake_object_order_depends_target_battleships: phony || CMakeFiles/battleships.dir
 
-build CMakeFiles/battleships.dir/main.cpp.o: CXX_COMPILER__battleships_Debug /home/nikita/battleships_aboba/greatSuperPuperBattleships/main.cpp || cmake_object_order_depends_target_battleships
+build CMakeFiles/battleships.dir/main.cpp.o: CXX_COMPILER__battleships_Debug /home/nikita/wtfRepo/battleships_aboba/greatSuperPuperBattleships/main.cpp || cmake_object_order_depends_target_battleships
   DEP_FILE = CMakeFiles/battleships.dir/main.cpp.o.d
-  FLAGS = -g -std=gnu++2a
+  FLAGS = -pthread  -g -std=gnu++17
   OBJECT_DIR = CMakeFiles/battleships.dir
   OBJECT_FILE_DIR = CMakeFiles/battleships.dir
 
-build CMakeFiles/battleships.dir/src/menu.cpp.o: CXX_COMPILER__battleships_Debug /home/nikita/battleships_aboba/greatSuperPuperBattleships/src/menu.cpp || cmake_object_order_depends_target_battleships
+build CMakeFiles/battleships.dir/src/menu.cpp.o: CXX_COMPILER__battleships_Debug /home/nikita/wtfRepo/battleships_aboba/greatSuperPuperBattleships/src/menu.cpp || cmake_object_order_depends_target_battleships
   DEP_FILE = CMakeFiles/battleships.dir/src/menu.cpp.o.d
-  FLAGS = -g -std=gnu++2a
+  FLAGS = -pthread  -g -std=gnu++17
   OBJECT_DIR = CMakeFiles/battleships.dir
   OBJECT_FILE_DIR = CMakeFiles/battleships.dir/src
 
-build CMakeFiles/battleships.dir/src/game.cpp.o: CXX_COMPILER__battleships_Debug /home/nikita/battleships_aboba/greatSuperPuperBattleships/src/game.cpp || cmake_object_order_depends_target_battleships
+build CMakeFiles/battleships.dir/src/game.cpp.o: CXX_COMPILER__battleships_Debug /home/nikita/wtfRepo/battleships_aboba/greatSuperPuperBattleships/src/game.cpp || cmake_object_order_depends_target_battleships
   DEP_FILE = CMakeFiles/battleships.dir/src/game.cpp.o.d
-  FLAGS = -g -std=gnu++2a
+  FLAGS = -pthread  -g -std=gnu++17
   OBJECT_DIR = CMakeFiles/battleships.dir
   OBJECT_FILE_DIR = CMakeFiles/battleships.dir/src
 
-build CMakeFiles/battleships.dir/src/settings.cpp.o: CXX_COMPILER__battleships_Debug /home/nikita/battleships_aboba/greatSuperPuperBattleships/src/settings.cpp || cmake_object_order_depends_target_battleships
-  DEP_FILE = CMakeFiles/battleships.dir/src/settings.cpp.o.d
-  FLAGS = -g -std=gnu++2a
-  OBJECT_DIR = CMakeFiles/battleships.dir
-  OBJECT_FILE_DIR = CMakeFiles/battleships.dir/src
-
-build CMakeFiles/battleships.dir/src/field.cpp.o: CXX_COMPILER__battleships_Debug /home/nikita/battleships_aboba/greatSuperPuperBattleships/src/field.cpp || cmake_object_order_depends_target_battleships
-  DEP_FILE = CMakeFiles/battleships.dir/src/field.cpp.o.d
-  FLAGS = -g -std=gnu++2a
-  OBJECT_DIR = CMakeFiles/battleships.dir
-  OBJECT_FILE_DIR = CMakeFiles/battleships.dir/src
-
-build CMakeFiles/battleships.dir/src/customText.cpp.o: CXX_COMPILER__battleships_Debug /home/nikita/battleships_aboba/greatSuperPuperBattleships/src/customText.cpp || cmake_object_order_depends_target_battleships
+build CMakeFiles/battleships.dir/src/customText.cpp.o: CXX_COMPILER__battleships_Debug /home/nikita/wtfRepo/battleships_aboba/greatSuperPuperBattleships/src/customText.cpp || cmake_object_order_depends_target_battleships
   DEP_FILE = CMakeFiles/battleships.dir/src/customText.cpp.o.d
-  FLAGS = -g -std=gnu++2a
+  FLAGS = -pthread  -g -std=gnu++17
   OBJECT_DIR = CMakeFiles/battleships.dir
   OBJECT_FILE_DIR = CMakeFiles/battleships.dir/src
 
-build CMakeFiles/battleships.dir/src/player.cpp.o: CXX_COMPILER__battleships_Debug /home/nikita/battleships_aboba/greatSuperPuperBattleships/src/player.cpp || cmake_object_order_depends_target_battleships
+build CMakeFiles/battleships.dir/src/cell.cpp.o: CXX_COMPILER__battleships_Debug /home/nikita/wtfRepo/battleships_aboba/greatSuperPuperBattleships/src/cell.cpp || cmake_object_order_depends_target_battleships
+  DEP_FILE = CMakeFiles/battleships.dir/src/cell.cpp.o.d
+  FLAGS = -pthread  -g -std=gnu++17
+  OBJECT_DIR = CMakeFiles/battleships.dir
+  OBJECT_FILE_DIR = CMakeFiles/battleships.dir/src
+
+build CMakeFiles/battleships.dir/src/ship.cpp.o: CXX_COMPILER__battleships_Debug /home/nikita/wtfRepo/battleships_aboba/greatSuperPuperBattleships/src/ship.cpp || cmake_object_order_depends_target_battleships
+  DEP_FILE = CMakeFiles/battleships.dir/src/ship.cpp.o.d
+  FLAGS = -pthread  -g -std=gnu++17
+  OBJECT_DIR = CMakeFiles/battleships.dir
+  OBJECT_FILE_DIR = CMakeFiles/battleships.dir/src
+
+build CMakeFiles/battleships.dir/src/player.cpp.o: CXX_COMPILER__battleships_Debug /home/nikita/wtfRepo/battleships_aboba/greatSuperPuperBattleships/src/player.cpp || cmake_object_order_depends_target_battleships
   DEP_FILE = CMakeFiles/battleships.dir/src/player.cpp.o.d
-  FLAGS = -g -std=gnu++2a
+  FLAGS = -pthread  -g -std=gnu++17
+  OBJECT_DIR = CMakeFiles/battleships.dir
+  OBJECT_FILE_DIR = CMakeFiles/battleships.dir/src
+
+build CMakeFiles/battleships.dir/src/field.cpp.o: CXX_COMPILER__battleships_Debug /home/nikita/wtfRepo/battleships_aboba/greatSuperPuperBattleships/src/field.cpp || cmake_object_order_depends_target_battleships
+  DEP_FILE = CMakeFiles/battleships.dir/src/field.cpp.o.d
+  FLAGS = -pthread  -g -std=gnu++17
   OBJECT_DIR = CMakeFiles/battleships.dir
   OBJECT_FILE_DIR = CMakeFiles/battleships.dir/src
 
@@ -99,8 +105,8 @@ build CMakeFiles/battleships.dir/src/player.cpp.o: CXX_COMPILER__battleships_Deb
 #############################################
 # Link the executable battleships
 
-build battleships: CXX_EXECUTABLE_LINKER__battleships_Debug CMakeFiles/battleships.dir/main.cpp.o CMakeFiles/battleships.dir/src/menu.cpp.o CMakeFiles/battleships.dir/src/game.cpp.o CMakeFiles/battleships.dir/src/settings.cpp.o CMakeFiles/battleships.dir/src/field.cpp.o CMakeFiles/battleships.dir/src/customText.cpp.o CMakeFiles/battleships.dir/src/player.cpp.o | /usr/lib/x86_64-linux-gnu/libsfml-graphics.so.2.5.1 /usr/lib/x86_64-linux-gnu/libsfml-audio.so.2.5.1 /usr/lib/x86_64-linux-gnu/libsfml-window.so.2.5.1 /usr/lib/x86_64-linux-gnu/libsfml-system.so.2.5.1
-  FLAGS = -g
+build battleships: CXX_EXECUTABLE_LINKER__battleships_Debug CMakeFiles/battleships.dir/main.cpp.o CMakeFiles/battleships.dir/src/menu.cpp.o CMakeFiles/battleships.dir/src/game.cpp.o CMakeFiles/battleships.dir/src/customText.cpp.o CMakeFiles/battleships.dir/src/cell.cpp.o CMakeFiles/battleships.dir/src/ship.cpp.o CMakeFiles/battleships.dir/src/player.cpp.o CMakeFiles/battleships.dir/src/field.cpp.o | /usr/lib/x86_64-linux-gnu/libsfml-graphics.so.2.5.1 /usr/lib/x86_64-linux-gnu/libsfml-audio.so.2.5.1 /usr/lib/x86_64-linux-gnu/libsfml-window.so.2.5.1 /usr/lib/x86_64-linux-gnu/libsfml-system.so.2.5.1
+  FLAGS = -pthread  -g
   LINK_LIBRARIES = /usr/lib/x86_64-linux-gnu/libsfml-graphics.so.2.5.1  /usr/lib/x86_64-linux-gnu/libsfml-audio.so.2.5.1  /usr/lib/x86_64-linux-gnu/libsfml-window.so.2.5.1  /usr/lib/x86_64-linux-gnu/libsfml-system.so.2.5.1
   OBJECT_DIR = CMakeFiles/battleships.dir
   POST_BUILD = :
@@ -113,7 +119,7 @@ build battleships: CXX_EXECUTABLE_LINKER__battleships_Debug CMakeFiles/battleshi
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/nikita/battleships_aboba/greatSuperPuperBattleships/cmake-build-debug && /snap/clion/189/bin/cmake/linux/bin/ccmake -S/home/nikita/battleships_aboba/greatSuperPuperBattleships -B/home/nikita/battleships_aboba/greatSuperPuperBattleships/cmake-build-debug
+  COMMAND = cd /home/nikita/wtfRepo/battleships_aboba/greatSuperPuperBattleships/cmake-build-debug && /snap/clion/189/bin/cmake/linux/bin/ccmake -S/home/nikita/wtfRepo/battleships_aboba/greatSuperPuperBattleships -B/home/nikita/wtfRepo/battleships_aboba/greatSuperPuperBattleships/cmake-build-debug
   DESC = Running CMake cache editor...
   pool = console
   restat = 1
@@ -125,7 +131,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/nikita/battleships_aboba/greatSuperPuperBattleships/cmake-build-debug && /snap/clion/189/bin/cmake/linux/bin/cmake --regenerate-during-build -S/home/nikita/battleships_aboba/greatSuperPuperBattleships -B/home/nikita/battleships_aboba/greatSuperPuperBattleships/cmake-build-debug
+  COMMAND = cd /home/nikita/wtfRepo/battleships_aboba/greatSuperPuperBattleships/cmake-build-debug && /snap/clion/189/bin/cmake/linux/bin/cmake --regenerate-during-build -S/home/nikita/wtfRepo/battleships_aboba/greatSuperPuperBattleships -B/home/nikita/wtfRepo/battleships_aboba/greatSuperPuperBattleships/cmake-build-debug
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -141,7 +147,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 
 #############################################
-# Folder: /home/nikita/battleships_aboba/greatSuperPuperBattleships/cmake-build-debug
+# Folder: /home/nikita/wtfRepo/battleships_aboba/greatSuperPuperBattleships/cmake-build-debug
 
 build all: phony battleships
 
