@@ -17,6 +17,10 @@ public:
     void play();
     Game();
 private:
+    inline static const std::vector<Ship::ShipType> commonShipSet = {Ship::ONEDECK,Ship::ONEDECK,Ship::ONEDECK,Ship::ONEDECK,
+                                                                 Ship::TWODECK,Ship::TWODECK,Ship::TWODECK,
+                                                                 Ship::THREEDECK,Ship::THREEDECK,
+                                                                 Ship::FOURDECK};
     Stage stage;
     std::vector<Player> players;
     size_t alive_players_count;

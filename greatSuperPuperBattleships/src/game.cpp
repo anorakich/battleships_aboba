@@ -13,10 +13,10 @@ Game::Game(): alive_players_count(player_count) {
 void Game::play() {
 
 
-    //TODO set ships and field;
-
-    stage = FIGHT;
-
+    for (auto type : commonShipSet) {
+        for (auto player : players)
+            player.setShip(type);
+    }
     size_t current_player = 0;
     while(true) {
         size_t next_player = (current_player + 1) % player_count;
@@ -24,7 +24,7 @@ void Game::play() {
         if (players[next_player].is_losed()) {
 //            win();
         }
-        current_player = (current_player + 1) % player_count;
+        current_player = next_player;
     }
 }
 

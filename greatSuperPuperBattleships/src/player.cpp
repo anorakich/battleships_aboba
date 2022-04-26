@@ -6,11 +6,12 @@
 #include "../ship.h"
 
 Player::Player() {
-
+    ships.reserve(100);
 }
 
 void Player::setShip(Ship::ShipType type) {
-    Ship ship(type);
+    ui->displayField(*field, false);
+    Ship* ship = new Ship(type);
     while (true) {
         Position start = ui->getPosition();
         Position end = ui->getPosition();
@@ -18,14 +19,18 @@ void Player::setShip(Ship::ShipType type) {
             if (start.y > end.y)
                 std::swap(start, end);
             for (int i = 0; i < type; ++i) {
-                ship.addCell(field->at(start.y + i, start.x));
+                ship->addCell(field->at(start.y + i, start.x));
             }
+            ships.push_back(ship);
+            break;
         } else if (start.y == end.y && abs(start.x - end.x) == type) {
             if (start.x > end.x)
                 std::swap(start, end);
             for (int i = 0; i < type; ++i) {
-                ship.addCell(field->at(start.y, start.x + i));
+                ship->addCell(field->at(start.y, start.x + i));
             }
+            ships.push_back(ship);
+            break;
         }
     }
 
@@ -64,6 +69,7 @@ void Player::keep_attack(Cell* cell) {
         }
     }
 }
-    bool Player::is_losed() {
-        return alive_ships_count == 0;
-    }
+
+bool Player::is_losed() {
+    return alive_ships_count == 0;
+}
