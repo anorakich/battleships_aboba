@@ -21,6 +21,7 @@ void Player::setShip(Ship::ShipType type) {
             for (int i = 0; i <= type; ++i) {
                 ship->addCell(field->at(start.y + i, start.x));
             }
+
             ships.push_back(ship);
             break;
         } else if (start.y == end.y && abs(start.x - end.x) == type) {

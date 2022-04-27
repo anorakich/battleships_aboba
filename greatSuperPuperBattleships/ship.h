@@ -25,7 +25,6 @@ public:
 
     void addCell(Cell* cell);
 
-    explicit Ship(size_t _sz);
 
     void deal_damage(size_t damage);
 
