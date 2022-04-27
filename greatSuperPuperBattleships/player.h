@@ -11,6 +11,13 @@
 
 class Player {
 public:
+    enum AttackState {
+        MISS,
+        BAD,
+        HURT,
+        KILL
+    };
+
     Player(size_t _id);
 
     void setUi(UI* _ui);
@@ -31,7 +38,7 @@ public:
 
     Position attack(Field* field);
 
-    void keep_attack(Position position);
+    AttackState keep_attack(Position position);
 
     bool is_losed() const;
 

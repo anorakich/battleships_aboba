@@ -5,10 +5,10 @@ Game::Game(): alive_players_count(player_count) {
     UI* ui = new GraphicUI();
     for (size_t i = 0; i < alive_players_count; ++i) {
         players.emplace_back(Player(i));
-        (--players.end())->set_name("Player " + std::to_string(i+1));
-        if (common_ui) (--players.end())->set_ui(ui);
+        (--players.end())->setName("Player" + std::to_string(i+1));
+        if (common_ui) (--players.end())->setUi(ui);
         auto field = new Field(size_of_board);
-        (--players.end())->set_field(field);
+        (--players.end())->setField(field);
     }
 }
 
@@ -23,17 +23,19 @@ void Game::startGame() {
 void Game::play() {
     Player* current = &players[0];
     while(alive_players_count > 1) {
-        attack(current, getNextPlayer(current));
+        Player* next = getNextPlayer(current);
+        attack(current, next);
+        if (next->is_losed()) alive_players_count -= 1;
         current = getNextPlayer(current);
     }
-//    win(current_player);
+    win(current);
 }
 
 void Game::attack(Player* current, Player* next) {
-    Position attack_position = current->attack(next->get_field());
-    next->keep_attack(attack_position);
-    current->get_ui()->displayField(*(next->get_field()), true);
-    current->get_ui()->waitForNextTurn();
+    Position attack_position = current->attack(next->getField());
+    Player::AttackState result = next->keep_attack(attack_position);
+    current->getUi()->displayField(*(next->getField()), true, current->getName(), attackResult[result]);
+    current->getUi()->waitForNextTurn();
 }
 
 Player* Game::getNextPlayer(const Player* current) {
@@ -44,6 +46,7 @@ Player* Game::getNextPlayer(const Player* current) {
     return &players[id];
 }
 
-
-
-
+void Game::win(Player* player) {
+    player->getUi()->displayNotification(player->getName() + " Wins!!!");
+    player->getUi()->waitForNextTurn();
+}

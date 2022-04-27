@@ -10,6 +10,7 @@
 #include "constants.h"
 #include <iostream>
 #include "customText.h"
+#include <string>
 
 class GraphicUI : public UI {
 private:
@@ -40,12 +41,12 @@ public:
     }
 
 
-    void displayField(const Field& field, bool isEnemiesField) {
+    void displayField(const Field& field, bool isEnemiesField, std::string name="", std::string notification="") {
         window.clear(sf::Color::Blue);
         if (isEnemiesField) {
             sf::Font font;
             font.loadFromFile("../src/fonts/OpenSans-SemiBoldItalic.ttf");
-            CustomText play_text("ATTACK!", font, app_width * 9 / 20, 2 * app_height / 15);
+            CustomText play_text(name + " " + notification, font, app_width * 9 / 20, 2 * app_height / 15);
             play_text.draw(window);
         }
 
@@ -73,6 +74,15 @@ public:
                 window.draw(cell);
             }
         }
+        window.display();
+    }
+
+    void displayNotification(std::string notification) {
+        window.clear(sf::Color::Blue);
+        sf::Font font;
+        font.loadFromFile("../src/fonts/OpenSans-SemiBoldItalic.ttf");
+        CustomText play_text(notification, font, app_width * 9 / 20, 2 * app_height / 15);
+        play_text.draw(window);
         window.display();
     }
 

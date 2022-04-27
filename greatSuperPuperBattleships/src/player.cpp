@@ -62,23 +62,25 @@ size_t Player::getId() const {
     return id;
 }
 
-void Player::keep_attack(Position position) {
+Player::AttackState Player::keep_attack(Position position) {
     Cell* cell = field->at(position.y, position.x);
-    if (cell->getIsHited()) return;
+    if (cell->getIsHited()) return AttackState::BAD;
     cell->setIsHited(true);
-    if (cell->getState() == Cell::EMPTY) return;
+    if (cell->getState() == Cell::EMPTY) return AttackState::MISS;
     if (cell->getState() == Cell::SHIP) {
         cell->setState(Cell::INJURED);
         Ship* ship = cell->getShip();
         ship->deal_damage(1);
         if (ship->getState() == Ship::DEAD) {
             alive_ships_count -= 1;
+            return AttackState::KILL;
         }
+        return AttackState::HURT;
     }
 }
 
 Position Player::attack(Field *enemy_field) {
-    ui->displayField(*enemy_field, true);
+    ui->displayField(*enemy_field, true, name, "Attack");
     return ui->getPosition();
 }
 
