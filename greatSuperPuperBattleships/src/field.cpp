@@ -14,3 +14,7 @@ Field::Field(size_t _sz): sz(_sz) {
         }
     }
 }
+
+Cell *Field::at(int i, int j) const {
+    return field[i][j];
+}

@@ -25,10 +25,9 @@ public:
 
     void addCell(Cell* cell);
 
-
     void deal_damage(size_t damage);
 
-    ShipState getState();
+    ShipState getState() const;
 
 private:
     std::vector<Cell*> cells;
@@ -36,6 +35,5 @@ private:
     size_t hp;
     ShipState state;
 };
-
 
 #endif //BATTLESHIPS_SHIP_H

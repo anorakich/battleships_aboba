@@ -1,7 +1,3 @@
-//
-// Created by nikita on 24.04.22.
-//
-
 #include "../ship.h"
 
 Ship::Ship(ShipType type): sz(type + 1), hp(type + 1), state(Ship::OK) {}
@@ -28,6 +24,6 @@ void Ship::deal_damage(size_t damage) {
     }
 }
 
-Ship::ShipState Ship::getState() {
+Ship::ShipState Ship::getState() const {
     return state;
 }

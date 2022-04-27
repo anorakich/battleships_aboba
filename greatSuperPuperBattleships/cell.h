@@ -1,7 +1,3 @@
-//
-// Created by nikita on 24.04.22.
-//
-
 #ifndef BATTLESHIPS_CELL_H
 #define BATTLESHIPS_CELL_H
 #pragma once
@@ -51,11 +47,11 @@ public:
 
     CellState getState() const;
 
-    void setShip(Ship* ship);
+    void setShip(Ship* _ship);
 
-    Ship* getShip();
+    Ship* getShip() const;
 
-    bool getIsHited();
+    bool getIsHited() const;
 
     void setIsHited(bool _isHited);
 

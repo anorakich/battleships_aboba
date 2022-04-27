@@ -11,32 +11,38 @@
 
 class Player {
 public:
-    Player();
+    Player(size_t _id);
 
-    void set_name(std::string _name);
+    void setUi(UI* _ui);
 
-    void set_field(Field* _field);
+    void setName(std::string _name);
 
-    void set_ui(UI* _ui);
-
-    UI* get_ui();
-
-    Field* get_field();
-
-    void keep_attack(Cell* cell);
+    void setField(Field* _field);
 
     void setShip(Ship::ShipType type);
 
-    bool is_losed();
+    UI* getUi() const;
+
+    std::string getName() const;
+
+    Field* getField() const;
+
+    size_t getId() const;
+
+    Position attack(Field* field);
+
+    void keep_attack(Position position);
+
+    bool is_losed() const;
 
 private:
+    size_t id;
+    UI* ui;
     std::string name;
     Field* field;
-    UI* ui;
     std::vector<Ship*> ships;
-    size_t ships_count = 10;
-    size_t alive_ships_count = 10;
+    size_t ships_count;
+    size_t alive_ships_count;
 };
-
 
 #endif //BATTLESHIPS_PLAYER_H

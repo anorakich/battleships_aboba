@@ -1,7 +1,3 @@
-//
-// Created by nikita on 24.04.22.
-//
-
 #include "../cell.h"
 
 Cell::Cell(): state(Cell::EMPTY) {}
@@ -9,16 +5,21 @@ Cell::Cell(): state(Cell::EMPTY) {}
 void Cell::setState(Cell::CellState _state) {
     state = _state;
 }
-void Cell::setShip(Ship* ship) { this->ship = ship; state = SHIP;}
+
+void Cell::setShip(Ship* _ship) {
+    ship = _ship;
+    state = SHIP;
+}
+
 Cell::CellState Cell::getState() const {
     return state;
 }
 
-Ship* Cell::getShip() {
+Ship* Cell::getShip() const {
     return ship;
 }
 
-bool Cell::getIsHited() {
+bool Cell::getIsHited() const {
     return isHited;
 }
 

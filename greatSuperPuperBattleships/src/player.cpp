@@ -1,12 +1,20 @@
-//
-// Created by nikita on 24.04.22.
-//
-
 #include "../player.h"
-#include "../ship.h"
 
-Player::Player() {
+Player::Player(size_t _id): id(_id), ships_count(count_of_ships),
+    alive_ships_count(count_of_ships) {
     ships.reserve(100);
+}
+
+void Player::setName(std::string _name) {
+    name = _name;
+}
+
+void Player::setField(Field* _field) {
+    field = _field;
+}
+
+void Player::setUi(UI* _ui) {
+    ui = _ui;
 }
 
 void Player::setShip(Ship::ShipType type) {
@@ -35,29 +43,27 @@ void Player::setShip(Ship::ShipType type) {
         }
     }
     ui->displayField(*field,false);
+    ui->waitForNextTurn();
 }
 
-void Player::set_name(std::string _name) {
-    name = _name;
+std::string Player::getName() const {
+    return name;
 }
 
-void Player::set_field(Field* _field) {
-    field = _field;
-}
-
-void Player::set_ui(UI* _ui) {
-    ui = _ui;
-}
-
-UI* Player::get_ui() {
+UI* Player::getUi() const {
     return ui;
 }
 
-Field* Player::get_field() {
+Field* Player::getField() const {
     return field;
 }
 
-void Player::keep_attack(Cell* cell) {
+size_t Player::getId() const {
+    return id;
+}
+
+void Player::keep_attack(Position position) {
+    Cell* cell = field->at(position.y, position.x);
     if (cell->getIsHited()) return;
     cell->setIsHited(true);
     if (cell->getState() == Cell::EMPTY) return;
@@ -71,6 +77,11 @@ void Player::keep_attack(Cell* cell) {
     }
 }
 
-bool Player::is_losed() {
+Position Player::attack(Field *enemy_field) {
+    ui->displayField(*enemy_field, true);
+    return ui->getPosition();
+}
+
+bool Player::is_losed() const {
     return alive_ships_count == 0;
 }

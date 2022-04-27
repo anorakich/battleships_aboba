@@ -41,6 +41,7 @@ Menu::Menu() {
                     menu_window.close();
                     if (menu_state == PLAY) {
                         Game game;
+                        game.startGame();
                         game.play();
                     }
                     if (menu_state == SETTINGS) {
