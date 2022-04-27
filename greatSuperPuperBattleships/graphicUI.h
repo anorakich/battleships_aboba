@@ -14,8 +14,9 @@
 class GraphicUI : public UI {
 private:
     sf::RenderWindow window;
-    inline static const std::vector<sf::Color> colorFromCellState = {sf::Color::Red, sf::Color::Cyan, sf::Color::Blue,
-                                                                     sf::Color::White, sf::Color::Black};
+    inline static const std::vector<sf::Color> colorFromCellState = {sf::Color::Red, sf::Color::Yellow,
+                                                                     sf::Color::Blue,
+                                                                     sf::Color::Black,sf::Color::White};
 public:
     GraphicUI() : window(sf::RenderWindow(sf::VideoMode(app_width, app_height),
                                           "battleships")) {}
@@ -63,9 +64,9 @@ public:
                         cell.setFillColor(colorFromCellState[state]);
                     } else {
                         if (field.at(i, j)->getIsHited())
-                            cell.setFillColor(colorFromCellState[2]);
-                        else
                             cell.setFillColor(sf::Color::White);
+                        else
+                            cell.setFillColor(sf::Color::Blue);
                     }
 
                 }

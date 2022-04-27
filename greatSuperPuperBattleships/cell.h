@@ -62,7 +62,7 @@ public:
 private:
     CellState state;
     Ship* ship;
-    bool isHited;
+    bool isHited = false;
 };
 
 #endif //BATTLESHIPS_CELL_H

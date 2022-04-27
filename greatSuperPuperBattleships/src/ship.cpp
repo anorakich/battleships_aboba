@@ -8,6 +8,7 @@ Ship::Ship(ShipType type): sz(type), hp(type), state(Ship::OK) {}
 
 void Ship::addCell(Cell* cell) {
     cells.push_back(cell);
+    cell->setShip(this);
 }
 
 void Ship::deal_damage(size_t damage) {
@@ -25,4 +26,8 @@ void Ship::deal_damage(size_t damage) {
     } else if (hp < sz && state != INJURED) {
         state = INJURED;
     }
+}
+
+Ship::ShipState Ship::getState() {
+    return state;
 }

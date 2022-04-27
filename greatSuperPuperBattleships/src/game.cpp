@@ -3,20 +3,28 @@
 //
 #include "SFML/Graphics.hpp"
 #include "../game.h"
+#include "../field.h"
 #include "../constants.h"
 #include "../graphicUI.h"
 
 Game::Game(): alive_players_count(player_count) {
     stage = START;
     UI* ui = new GraphicUI();
+    for (size_t i = 0; i < alive_players_count; ++i) {
+        players.emplace_back(Player());
+        (--players.end())->set_name("Player");
+        if (common_ui) (--players.end())->set_ui(ui);
+        auto field = new Field(size_of_board);
+        (--players.end())->set_field(field);
+    }
 }
 void Game::play() {
-
-
-    //TODO set ships and field;
-
-    stage = FIGHT;
-
+    for (auto type : commonShipSet) {
+        for (auto player : players) {
+            player.setShip(type);
+            player.get_ui()->waitForNextTurn();
+        }
+    }
     size_t current_player = 0;
     while(alive_players_count > 1) {
         size_t next_player = (current_player + 1) % player_count;
@@ -28,8 +36,9 @@ void Game::play() {
         while (players[current_player].is_losed()) {
             current_player = (current_player + 1) % player_count;
         }
+        current_player = next_player;
     }
-    win(current_player);
+//    win(current_player);
 }
 
 void Game::attack(size_t current_player, size_t next_player) {
